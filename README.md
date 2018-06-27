@@ -8,6 +8,10 @@ This is a classic Memory Game, made up of 16 shuffled cards.
 
 ## How to play:
 
+-Download or clone the repository on your machine.
+
+-Extract the .zip file and open index.html in your browser.
+
 -The goal is to match all the cards together and win the game.
 
 -Start by clicking on one card. 
