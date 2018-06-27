@@ -22,4 +22,4 @@ This is a classic Memory Game, made up of 16 shuffled cards.
 can be pressed to Replay the game or Close the window.
 
 ## Author :
-**Nistor Sergiu Cosmin** -_Front End Web Developer_
+**Nistor Sergiu Cosmin** - _Front End Web Developer_
