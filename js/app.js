@@ -1,23 +1,35 @@
 /*
- * Create a list that holds all of your cards
+ * Global Variables
  */
 const iconsList = ["fa fa-diamond", "fa fa-diamond", "fa fa-paper-plane-o", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa-anchor", "fa fa-bolt", "fa fa-bolt", "fa fa-cube", "fa fa-cube", "fa fa-leaf", "fa fa-leaf", "fa fa-bicycle", "fa fa-bicycle", "fa fa-bomb", "fa fa-bomb"];
 const cardsContainer = document.querySelector(".deck");
-
+const cancelBtnModal = document.querySelector('.modal_cancel');
 const secondsContainer = document.querySelector("#seconds");
 const minutesContainer = document.querySelector("#minutes");
 const hoursContainer   = document.querySelector("#hours");
+const restartBtnModal = document.querySelector('.modal_replay');
+const restartBtn = document.querySelector(".restart");
+const movesContainer = document.querySelector(".moves");
+const starsContainer = document.querySelector(".stars");
+const star = `<li><i class="fa fa-star"></i></li>`;
 
+starsContainer.innerHTML = star + star + star;
+movesContainer.innerHTML = 0;
+
+
+let totalSeconds = 0;
 let hours = 0;
 let minutes = 0;
 let seconds = 0;
-
+let isFirstClick = true;
 let openedCards = [];
 let matchedCards = [];
+let moves = 0;
 
 /*
  * Initializing the game
  */
+
 function init() {
     const icons = shuffle(iconsList);
     for(let i = 0; i < icons.length; i++) {
@@ -31,15 +43,10 @@ function init() {
     }
 }
 
-
 /*
  * Click Event
  */
 
-// First Click Indicator
-let isFirstClick = true;
-
-// Click Function
 function click(card) {
 
     // Card Click Event
@@ -72,10 +79,10 @@ function click(card) {
     });
 }
 
-
 /*
  * Compare the 2 cards
  */
+
 function compare(currentCard, previousCard) {
 
     // Matcher
@@ -110,6 +117,7 @@ function compare(currentCard, previousCard) {
 /*
  * Check if the game is over!
  */
+
 function isOver() {
     if(matchedCards.length === iconsList.length) {
 
@@ -120,13 +128,10 @@ function isOver() {
     }
 }
 
-
 /*
  * Add move
  */
-const movesContainer = document.querySelector(".moves");
-let moves = 0;
-movesContainer.innerHTML = 0;
+
 function addMove() {
     moves++;
     movesContainer.innerHTML = moves;
@@ -138,10 +143,7 @@ function addMove() {
 /*
  * Rating
  */
-const starsContainer = document.querySelector(".stars");
-const star = `<li><i class="fa fa-star"></i></li>`;
 
-starsContainer.innerHTML = star + star + star;
 function rating() {
 
     if( moves < 18) {
@@ -156,6 +158,7 @@ function rating() {
 /*
  * Star rating for Modal
  */
+
 function getStars() {
   if( moves < 18) {
       stars = 3;
@@ -166,13 +169,12 @@ function getStars() {
   }
   return stars;
 }
+
 /*
  * Timer
  */
 
-totalSeconds = 0;
-
- function startTimer() {
+function startTimer() {
     liveTimer = setInterval(function() {
         // Increase the totalSeconds by 1
         totalSeconds++;
@@ -204,9 +206,11 @@ totalSeconds = 0;
 function stopTimer() {
     clearInterval(liveTimer);
 }
+
 /*
  * Timer [ Calculate Time ]
  */
+
 function calculateTime(totalTime) {
     hours   = Math.floor( totalTime / 60 / 60);
     minutes = Math.floor( (totalTime / 60) % 60);
@@ -216,7 +220,7 @@ function calculateTime(totalTime) {
 /*
  * Restart Button
  */
-const restartBtn = document.querySelector(".restart");
+
 restartBtn.addEventListener("click", function() {
     // Delete ALL cards
     cardsContainer.innerHTML = "";
@@ -253,7 +257,7 @@ function writeModalStats() {
 }
 
 // Modal buttons event listeners
-const restartBtnModal = document.querySelector('.modal_replay');
+
 restartBtnModal.addEventListener("click", function() {
   // Delete ALL cards
   cardsContainer.innerHTML = "";
@@ -268,7 +272,6 @@ restartBtnModal.addEventListener("click", function() {
 
 });
 
-const cancelBtnModal = document.querySelector('.modal_cancel');
 cancelBtnModal.addEventListener("click", function() {
   toggleModal();
 });
