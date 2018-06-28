@@ -31,5 +31,10 @@ This is a classic Memory Game, made up of 16 shuffled cards.
 
 -At the end of the game, a window will pop that will display your stats and 2 buttons that can be pressed to Replay the game or Close the window.
 
+## External Libraries/Game dependecies
+
+-Bootstrap and Google Fonts.
+
 ## Author :
 **Nistor Sergiu Cosmin** - _Front End Web Developer_
+
