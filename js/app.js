@@ -282,7 +282,7 @@ cancelBtnModal.addEventListener("click", function() {
 function reset() {
     // Empty the `matchedCards` array
     matchedCards = [];
-
+    openedCards = []; 
     // Reset `moves`
     moves = 0;
     movesContainer.innerHTML = moves;

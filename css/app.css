@@ -34,7 +34,7 @@ h1 {
 }
 
 /*
- * Styles for the deck of cards
+ * Styles for the deck of deck
  */
 
 .deck {
@@ -167,4 +167,68 @@ h1 {
 }
 .hide {
   display: none;
+}
+
+/*
+ * Responsive
+ */
+
+@media screen and (min-width: 360px) {
+.deck {
+  width:   320px;
+  min-height: 320px;
+  }
+.deck .card {
+  height: 53px;
+  width: 53px;
+}
+.score-panel {
+  width: 65%;
+}
+.deck .card.show {
+  font-size: 25px;
+}
+.deck .card.match {
+  font-size: 25px;
+}
+@media screen and (min-width: 600px) {
+.deck {
+  width:   600px;
+  min-height: 600px;
+    }
+.deck .card {
+  height: 110px;
+  width: 110px;
+    }
+.score-panel {
+  width: 60%;
+  font-size: 20px;
+    }
+.deck .card.show {
+  font-size: 33px;
+    }
+.deck .card.match {
+  font-size: 33px;
+    }
+@media screen and (min-width: 900px) {
+h1 {
+  font-size: 45px;
+}
+.deck {
+  width:   800px;
+  min-height: 800px;
+    }
+.deck .card {
+  height: 150px;
+  width: 150px;
+    }
+.score-panel {
+  width: 60%;
+  font-size: 30px;
+    }
+.deck .card.show {
+  font-size: 40px;
+    }
+.deck .card.match {
+  font-size: 40px;}
 }
