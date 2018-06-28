@@ -1,20 +1,40 @@
-# Memory Game Project
+# Sergiu's Memory Game Project
 
-## Table of Contents
+This is my second project i did for Udacity, and my first one in Javascript!
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+## About the game
 
-## Instructions
+This is a classic Memory Game, made up of 16 shuffled cards.
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## How to play:
 
-To get started, open `js/app.js` and start building out the app's functionality
+-Download or clone the repository on your machine.
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+-Extract the .zip file and open index.html in your browser.
 
-## Contributing
+-The goal is to match all the cards together and win the game.
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+-Start by clicking on one card. 
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+-If they match, they will remain with face up.
+
+-If they don't, they will flip and you will have to search for the ones that do match.
+
+-Keep matching up pairs until all cards are matched and faced up.
+
+## Game elements:
+
+
+-You can notice on the top side that you have a star rating ( ranging from 3 to 1 star )
+
+-You also have moves counter and a timer.
+
+-At the end of the game, a window will pop that will display your stats and 2 buttons that can be pressed to Replay the game or Close the window.
+
+## External Libraries/Game dependecies
+
+-Bootstrap and Google Fonts.
+
+## Author :
+**Nistor Sergiu Cosmin** - _Front End Web Developer_
+
